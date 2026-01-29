@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מכונות הידיעה / חמי רמיאל</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3e4a3d; 
+            --accent-color: #8c6a5d; 
+            --bg-light: #fdfcfb;
+            --text-dark: #2c2c2c;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title { font-family: 'Frank Ruhl Libre', serif; font-size: 1.4rem; font-weight: bold; color: var(--primary-color); }
+        nav a { color: var(--text-dark); text-decoration: none; margin: 0 12px; font-weight: 400; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('sideyellow.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content h1 { font-family: 'Frank Ruhl Libre', serif; font-size: 3.5rem; margin: 0; }
+        .hero-content p { font-size: 1.5rem; max-width: 850px; margin: 1rem auto; }
+
+        .container { width: 85%; max-width: 1150px; margin: auto; padding: 4rem 0; }
+
+        h2 { font-family: 'Frank Ruhl Libre', serif; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); display: inline-block; margin-bottom: 1.5rem; }
+
+        /* Generic Section Intro (Text + Image) */
+        .section-intro { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 2rem; }
+        .section-text { flex: 2; }
+        .section-image { flex: 1; min-width: 250px; }
+        .section-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        /* Grid Layout for Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; color: var(--primary-color); font-size: 1.3rem; }
+
+        .tag {
+            display: inline-block;
+            background: #eee;
+            color: #666;
+            padding: 2px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .scholar-link { 
+            display: inline-block; 
+            margin-top: auto; 
+            padding-top: 15px;
+            color: var(--accent-color); 
+            font-weight: bold; 
+            text-decoration: none; 
+        }
+
+        footer { background: var(--primary-color); color: white; text-align: center; padding: 4rem 0; margin-top: 4rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 10px; }
+            .section-intro { flex-direction: column; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .container { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-title">מכונות הידיעה / חמי רמיאל</div>
+    <nav>
+        <a href="#about">אודות</a>
+        <a href="#lectures">הרצאות וסדנאות</a>
+        <a href="#academic">מחקר</a>
+        <a href="#writings">דברים שכתבתי ואמרתי</a>
+        <a href="#journal">יומן הספר</a>
+        <a href="#contact">צור קשר</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>מכונות הידיעה / חמי רמיאל</h1>
+        <p>מחקר, ליווי וייעוץ - חינוך, ידע ולמידה בעידן הדיגיטלי ובינה מלאכותית</p>
+    </div>
+</div>
+
+<div class="container">
+    
+    <section id="about" class="section-intro">
+        <div class="section-text">
+            <h2>אודות</h2>
+            <p>נעים מאוד, אני חמי רמיאל. העבודה שלי ממוקמת בנקודת המפגש שבין חברה, טכנולוגיה וחינוך. בעולם שבו הבינה המלאכותית והמדיה הדיגיטלית מגדירות מחדש את גבולות האדם, הידע והלמידה, אני מבקש להציע מבט סוציולוגי ביקורתי ששואל לא רק "איך משתמשים בטכנולוגיה", אלא "מה היא עושה לנו" כבני אדם, כמורות וכתלמידות.
+	
+המומחיות שלי נשענת על שני עמודי תווך משלימים: מצד אחד, המחקר האקדמי. עבודתי מתמקדת בסוציולוגיה של טכנולוגיה חינוכית (Edtech). אני חוקר את מרחבי הייצור של הטכנולוגיה, את המסרים הסמויים של הטכנולוגיה החינוכית, את יישומי מדיניות של חינוך וטכנולוגיה, ואת המפגש היומיומי שבין טכנולוגיה מורות ותלמידות.
+	מצד שני, אני מביא היכרות אינטימית עם השטח. עבדתי ועדיין עובד כמורה בפועל, ואני מכיר מקרוב את רעשי הרקע של הכיתה ואת האתגרים היומיומיים של צוותי ההוראה. הניסיון הזה מאפשר לי ללוות מנהלים מורות ומקבלות החלטות בתהליכי שינוי עמוקים, מתוך הבנה אמיתית של המציאות בשטח.
+	בשנים האחרונות אני פועל בתווך שבין ידע אקדמי לבין קובעי מדיניות. אני מייעץ למקבלי החלטות, כולל במשרד החינוך הישראלי, בנושאי בינה מלאכותית וטכנולוגיה. המטרה שלי היא לתווך את המורכבות החברתית של הטכנולוגיה כך שתוביל להחלטות חינוכיות מושכלות, אנושיות וערכיות יותר.
+	בנוסף, אני עוסק בהכשרת הדור הבא של המורים. כיום אני מלמד בתכניות להסבת הוראה בסמינר הקיבוצים, שם אני פוגש אנשי מקצוע מנוסים שעוברים לעולם החינוך, ומסייע להם לגבש תפיסה פדגוגית מותאמת לעידן הנוכחי.
+	
+אני מאמין שהטכנולוגיה היא לא רק כלי עבודה, היא סביבת חיים. התפקיד שלנו הוא להבין אותה, כדי שלא נהפוך רק לחלק מהמנגנון שלה.</p>
+        </div>
+        <div class="section-image">
+            <img src="mecypress.jpg" alt="חמי רמיאל">
+        </div>
+    </section>
+
+    <section id="lectures" style="margin-top: 4rem;">
+        <div class="section-intro">
+            <div class="section-text">
+                <h2>הרצאות וסדנאות</h2>
+                <p>ההרצאות והסדנאות שאני מציע מבוססות על הקורסים  ועל הרצאות וסדנאות קודמות שהעברתי, כמו גם על ידע מתחדש ועל הצרכים החינוכיים שעולים מהשטח. מטרתן היא לפתח את החשיבה ואת הכלים החינוכיים והפדגוגיים בהתמודדות עם עולם רווי טכנולוגיה ועם התפשטותה של הבינה המלאכותית היוצרת. ההרצאות שלי נושאות אופי סדנאי שמדגיש דיון ודיאלוג והתנסות מעשית ומותאמות לצרכים שלכן ושלכם.</p>
+            </div>
+            <div class="section-image">
+                <img src="groupbrown.jpg" alt="הרצאות וסדנאות">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>דילמת החינוך בעידן הדיגיטלי</h3>
+                <p>תהליך למידה משותף על ההשפעה של סביבות המדיה הדיגיטליות על חיי התלמידים וחיי בית הספר וגיבוש תפיסה חינוכית להתמודדות.</p>
+            </div>
+            <div class="card">
+                <h3>חדר המראות</h3>
+                <p>כיצד נתמודד עם השינויים בתהליכי הלמידה ויצירת הידע בעידן הבינה המלאכותית.</p>
+            </div>
+            <div class="card">
+                <h3>בינה מלאכותית שותף או כלי</h3>
+                <p>מחשבה משותפת על יחסי אדם-מכונה בכיתה ובבית ספר.</p>
+            </div>
+            <div class="card">
+                <h3>בארץ הרובוטים</h3>
+                <p>חינוך לאנושיות בעידן העכשווי.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="academic" style="margin-top: 6rem;">
+        <div class="section-intro">
+            <div class="section-text">
+                <h2>מחקר</h2>
+                <p>המחקר האקדמי מבטא את תחומי העניין שלי בנקודות המפגש שבין חברה, טכנולוגיה וחינוך.</p>
+                <a href="https://scholar.google.com/citations?user=6g-FoNsAAAAJ&hl=en&oi=ao" target="_blank" class="scholar-link">צפו בעמוד שלי בגוגל סקולר ←</a>
+            </div>
+            <div class="section-image">
+                <img src="fewwhitesp.jpg" alt="מחקר אקדמי">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="tag">JOURNAL ARTICLE</span>
+                <h3>User or student: constructing the subject in Edtech incubator</h3>
+                <p>בוחן כיצד סביבות פיתוח אדטק מגדירות מחדש את התלמיד כ"משתמש" ומסיטות את השיח החינוכי לשיח עסקי.</p>
+            </div>
+            <div class="card">
+                <span class="tag">JOURNAL ARTICLE</span>
+                <h3>The epistemic machinery of educational platforms</h3>
+                <p>ניתוח פלטפורמות ללמידה רגשית (SEL) ככלים המעצבים דרכים חדשות "לדעת" את התלמיד דרך נתונים.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="writings" style="margin-top: 6rem;">
+        <h2>דברים שכתבתי ואמרתי</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">📄 סקירה מקצועית</span>
+                <h3>הוגנות ושוויון בבינה מלאכותית בחינוך</h3>
+                <p>סקירה שנכתבה עבור לשכת המדען הראשי במשרד החינוך (2022).</p>
+                <a href="https://meyda.education.gov.il/files/LishcatMadaan/SkirotSifrut/ai-fairness-and-equality.pdf" target="_blank" class="scholar-link">לקריאה ←</a>
+            </div>
+            <div class="card">
+                <span class="tag">🎬 וידאו</span>
+                <h3>קוליקוויום STS בר אילן</h3>
+                <p>הרצאה על הממשקים שבין חברה לטכנולוגיה חינוכית.</p>
+                <a href="https://www.youtube.com/watch?v=CCCnGcr7nVw" target="_blank" class="scholar-link">לצפייה ביוטיוב ←</a>
+            </div>
+            <div class="card">
+                <span class="tag">🎤 כנסים</span>
+                <h3>למידה בחירום בירושלים</h3>
+                <p>מתוך כנס האגודה הסוציולוגית 2022. התמודדות בתי ספר עם הקורונה.</p>
+                <a href="#" class="scholar-link">לקריאת הפייפר ←</a>
+            </div>
+            <div class="card">
+                <span class="tag">✍️ בלוג</span>
+                <h3>מכונות אפיסטמיות</h3>
+                <p>רשימות ומחשבות מהבלוג האישי.</p>
+                <a href="https://epistemicmachines.blogspot.com/" target="_blank" class="scholar-link">למעבר לבלוג ←</a>
+            </div>
+ <div class="card">
+                <span class="tag">🎤 ב-2021 דיברתי על המחקר שלי בפודקאסט בנושא השכלה גבוהה</span>
+ 		 <a href="https://podcasts.apple.com/us/podcast/on-users-disrupters-and-how-edtech-aims-to-reshape/id1508036435?i=1000522000546" target="_blank" class="scholar-link">באפל ←</a>
+                 <a href="https://open.spotify.com/episode/4DOpE6GZhXKDbP085Q5oFG" target="_blank" class="scholar-link">בספוטיפיי ←</a>
+        </div>
+    </section>
+
+    <section id="journal" style="margin-top: 6rem; background: #f1ede9; padding: 2rem; border-radius: 8px;">
+        <h2>יומן הספר</h2>
+        <p>כאן יפורסמו עדכונים ותובנות מתוך כתיבת הספר על חינוך ושפע דיגיטלי במהלך השנה הקרובה.</p>
+    </section>
+
+</div>
+
+<footer id="contact">
+    <h2>צור קשר</h2>
+    <p>להזמנת הרצאות, סדנאות וייעוץ</p>
+    <p>Email: hemyram@gmail.com</p>
+    <p>© 2026 חמי רמיאל - מכונות הידיעה</p>
+</footer>
+
+</body>
+</html>
